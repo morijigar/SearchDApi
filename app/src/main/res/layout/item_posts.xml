@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.example.apifetch.R" />
+
+        <variable
+            name="model"
+            type="com.example.apifetch.models.Datum" />
+    </data>
+
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="8dp"
+        android:orientation="horizontal">
+
+        <!--<androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            app:imageUrl="@{model.images.get(0).link}" />-->
+         <!--<androidx.appcompat.widget.AppCompatImageView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_gravity="center_vertical"
+             app:imageUrl="@{model.images[0].link}" />-->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            app:imageUrlMed="@{model.firstImage}" />
+
+    </LinearLayout>
+
+
+</layout>
